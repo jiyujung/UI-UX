@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Storage clear() Method</h1>
+<button onclick="createItems()">Create local storage items</button>
+
+<h2>Display Items</h2>
+<button onclick="displayItems()">Display items</button>
+
+<h2>Remove Items</h2>
+<button onclick="deleteItems()">Delete items</button>
+<hr>
+<p id="demo"></p>
+
+<script>
+// handler 함수
+function createItems() {
+  localStorage.setItem("mytime", Date.now());
+  localStorage.setItem("myname", "John");
+  localStorage.setItem("myage", 36);
+}
+
+function deleteItems() {
+  localStorage.clear();
+}
+
+function displayItems() {
+  var l, i;
+  document.getElementById("demo").innerHTML = "";
+  for (i = 0; i < localStorage.length; i++) {
+    x = localStorage.key(i);
+    document.getElementById("demo").innerHTML += x + "<br>";
+  }
+}
+</script>
+
+</body>
+</html>
