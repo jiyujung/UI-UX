@@ -15,19 +15,19 @@
 				return "고릴라";
 			}
 		}
-		function updatePoints(bonus, newPoints) {
-			for (var i = 0; i < bonus; i++) {
+		function updatePoints(bonus, newPoints) {	// 2, 100
+			for (var i = 0; i < bonus; i++) {		// i=0 newPoints=100, i=1 newPoints=104
 				newPoints += skill * bonus;
 			}
-			return newPoints + userPoints;
-
+			return newPoints + userPoints;	// i=1 newPoints=104일때 104+2008을 돌려줌
+																			// userPoints는 전역변수
 		}
 
 		var skill = 1.0;
 		var pointsPerLevel = 1000;
 		var userPoints = 2008;
 		userPoints = updatePoints(2, 100);
-
+		// i=1 newPoints=104일때 104+2008=2112가 돌아옴
 		youravatar = getAvatar1(userPoints);
 
 
