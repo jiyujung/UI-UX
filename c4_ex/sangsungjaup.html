@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>생성자만들기와 사용</title>
+<meta charset="utf-8">
+<script>
+//1.학생에 대한 생성자 함수 만들기
+function stud(name, score, grade) {
+  this.name = name;
+  this.score = score;
+  this.grade = grade;
+  this.comment = function() {   // 함수값을  comment 속성에 할당해서 초기화함으로써 메소드를 추가
+    alert(this.name + " 학생의 점수는 " + this.score + "이고 등급은 " + this.grade + " 입니다.");
+  };// 객체를 정의하는 거소가 구문이 다르다는 점
+    // 문장이므로 일반적인 함수에서 하듯이 맨끝에 ;를 붙인다.
+}
+
+//2.생성자 사용
+//stud생성
+var stud1 = new stud("지유정", 100, "A");
+var stud2 = new stud("이하나", 35, "F");
+var stud3 = new stud("김둘", 87, "B");
+var stud4 = new stud("우셋", 77, "C");
+
+//comment 메서드를 호출해서 작동해서 사용
+stud1.comment();
+stud2.comment();
+stud3.comment();
+stud4.comment();
+</script>
+</head>
+<body>
+document.write("생성자 test");
+</body>
+</html>
+
+
+
