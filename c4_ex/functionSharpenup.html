@@ -15,6 +15,11 @@
 			return area;
 		}
 
+		function triangleArea(width, height) {
+			var area = width * height / 2;
+			return area;
+		}
+
 		function addUp(numArray) {
 			var total = 0;
 			for (var i = 0; i < numArray.length; i++) {
@@ -35,18 +40,30 @@
 			return avatar;
 		}
 
+		function getAvatar1(points) {
+			var level = points;
+			if (level == 0) {
+				return "장난감 곰";
+			} else if (level == 1) {
+				return "고양이";
+			} else if (level >= 2) {
+				return "고릴라";
+			}
+		}
+
 		var myDogsAge = dogsAge(4);
 		var rectArea = rectangleArea(3, 4);
+		var triangleArea = triangleArea(3, 4);
 		var theTotal = addUp([1, 5, 3, 9]);
 		var myAvatar = getAvatar(335);
+		var yourAvater = getAvatar1(2);
 
 		// 추가 변수에 함수 할당 1
 		window.onload = outputResults;
 		function outputResults() {
 			var output = document.getElementById("output");
-			output.innerHTML = "강아지 나이: " + myDogsAge +
-				"<br>사각형 면적: " + rectArea + "<br>합계: " + theTotal +
-				"<br>내 아바타: " + myAvatar;
+			output.innerHTML = "강아지 나이: " + myDogsAge + "<br>삼각형 면적: " + triangleArea + "<br>사각형 면적: " + rectArea + "<br>합계: " + theTotal +
+				"<br>내 아바타: " + myAvatar + "<br>너의 아바타: " + yourAvater;
 		}
 	</script>
 </head>
