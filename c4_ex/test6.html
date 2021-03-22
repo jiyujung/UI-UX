@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>함수</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script>
+    var Person = {};
+
+    Person['age'] = 20;
+    Person['name'] = '방탄소년단';
+
+    var oper = function(a, b) {
+      return a + b;
+    };
+
+    Person['add'] = oper;
+
+    console.log('더하기(10, 10) : %d', Person.add(10, 10));
+  </script>
+</body>
+
+</html>
