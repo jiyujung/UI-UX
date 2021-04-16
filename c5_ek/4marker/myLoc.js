@@ -74,7 +74,7 @@ function showMap(coords) {
 	// 사용자 마커를 추가
 	//추가2
 	var title = "당신의 위치";
-	var content = " 당신은 여기에 있습니다: " +
+	var content = title + "<br> 당신은 여기에 있습니다: " +
 		coords.latitude + ", " + coords.longitude;
 	addMarker(map, googleLatAndLong, title, content);
 }
