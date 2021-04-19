@@ -18,3 +18,10 @@ div#map {
 	border: 1px solid black;
 }
 
+div#location {
+	color: blue;
+}
+
+div#distance {
+	color: blue;
+}
