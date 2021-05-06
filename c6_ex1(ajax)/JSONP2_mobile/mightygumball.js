@@ -40,7 +40,7 @@ function updateSales(sales) {
 		var sale = sales[i];
 		var div = document.createElement("div");
 		div.setAttribute("class", "saleItem");
-		div.innerHTML = sale.name + "에서 검볼을 " + sale.sales + "개 팔았습니다";
+		div.innerHTML = sale.name + "에서 검볼을 " + sale.sales + "개 판매하였습니다!!";
 		// salesDiv.appendChild(div);
 		if (salesDiv.childElementCount == 0) {
 			salesDiv.appendChild(div);
