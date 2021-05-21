@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="cd_catalog.css"?>
+<CATALOG>
+	<CD>
+		<NO>1</NO>
+		<TITLE>작은 별이지만 빛나고 있어</TITLE>
+		<ARTIST>3313지유정</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>북로망스</COMPANY>
+		<PRICE>13,500</PRICE>
+		<YEAR>2021</YEAR>
+	</CD>
+	<CD>
+		<NO>2</NO>
+		<TITLE>미드나잇 라이브러리</TITLE>
+		<ARTIST>매트 헤이그</ARTIST>
+		<COUNTRY>미국</COUNTRY>
+		<COMPANY>인플루엔셜</COMPANY>
+		<PRICE>14,220</PRICE>
+		<YEAR>2018</YEAR>
+	</CD>
+	<CD>
+		<NO>3</NO>
+		<TITLE>달러구트 꿈 백화점</TITLE>
+		<ARTIST>이미예</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>팩토리나인</COMPANY>
+		<PRICE>12,420</PRICE>
+		<YEAR>2020</YEAR>
+	</CD>
+	<CD>
+		<NO>4</NO>
+		<TITLE>부자 아빠 가난한 아빠</TITLE>
+		<ARTIST>로버트 기요사키</ARTIST>
+		<COUNTRY>미국</COUNTRY>
+		<COMPANY>민음인</COMPANY>
+		<PRICE>14,220</PRICE>
+		<YEAR>2018</YEAR>
+	</CD>
+	<CD>
+		<NO>5</NO>
+		<TITLE>싱크 어게인</TITLE>
+		<ARTIST>애덤 그랜트</ARTIST>
+		<COUNTRY>영국</COUNTRY>
+		<COMPANY>한국경제신문</COMPANY>
+		<PRICE>177,820</PRICE>
+		<YEAR>2021</YEAR>
+	</CD>
+	<CD>
+		<NO>6</NO>
+		<TITLE>하고 싶은 대로 살아도 괜찮아</TITLE>
+		<ARTIST>윤정은</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>애플북스</COMPANY>
+		<PRICE>11,700</PRICE>
+		<YEAR>2019</YEAR>
+	</CD>
+	<CD>
+		<NO>7</NO>
+		<TITLE>아몬드</TITLE>
+		<ARTIST>손원평</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>창비</COMPANY>
+		<PRICE>10,800</PRICE>
+		<YEAR>2017</YEAR>
+	</CD>
+	<CD>
+		<NO>8</NO>
+		<TITLE>시크릿</TITLE>
+		<ARTIST>론다 번</ARTIST>
+		<COUNTRY>유럽</COUNTRY>
+		<COMPANY>살림Biz</COMPANY>
+		<PRICE>12,420</PRICE>
+		<YEAR>2007</YEAR>
+	</CD>
+	<CD>
+		<NO>9</NO>
+		<TITLE>데미안</TITLE>
+		<ARTIST>헤르만 헤세</ARTIST>
+		<COUNTRY>독일</COUNTRY>
+		<COMPANY>더스토리</COMPANY>
+		<PRICE>10,800</PRICE>
+		<YEAR>2017</YEAR>
+	</CD>
+	<CD>
+		<NO>10</NO>
+		<TITLE>우리가 빛의 속도로 갈 수 없다면</TITLE>
+		<ARTIST>김초엽</ARTIST>
+		<COUNTRY>한국</COUNTRY>
+		<COMPANY>허블</COMPANY>
+		<PRICE>12,600</PRICE>
+		<YEAR>2019</YEAR>
+	</CD>
+</CATALOG>
