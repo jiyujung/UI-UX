@@ -1,0 +1,37 @@
+body {
+	margin-left: 40px;
+	margin-right: 40px;
+	width : auto;
+	
+}
+h1{
+	text-align:center; 
+}
+div#subwaypeople {
+	background-color: #9aabd3;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	border: 1px solid #9aabd3;
+}
+div.subwayItem {
+	font-family: Verdana, Helvetica, sans-serif;
+	color: #ffffff;
+	padding: 10px;
+}
+div.subwayItem:nth-child(2n) {
+	background-color: #646464;
+}
+div.subwayItem:first-child {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+div.subwayItem:last-child {
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
