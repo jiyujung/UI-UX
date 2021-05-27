@@ -6,7 +6,7 @@ window.onload = function() {
 function handleRefresh() {
     console.log("here");
 
-    var url = "http://openapi.seoul.go.kr:8088/62464a4e776a6a353638794c626956/json/CardSubwayStatsNew/1/100/20210101/";
+    var url = "http://openapi.seoul.go.kr:8088/62464a4e776a6a353638794c626956/json/CardSubwayStatsNew/1/100/20200101/";
     $.getJSON(url, updateTraffic);
 }
 /*function updateTraffic(responseText) {
