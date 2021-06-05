@@ -1,0 +1,43 @@
+div#libraries {
+	background-color: #9aabd3;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	border: 1px solid #9aabd3;
+}
+div.library {
+	font-family: Verdana, Helvetica, sans-serif;
+	color: #ffffff;
+	padding: 10px;
+}
+div.library:nth-child(2n) {
+	background-color: #646464;
+}
+div.library:first-child {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+div.library:last-child {
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+div#title {
+	background:rgb(75, 78, 110);
+	color: rgb(255, 255, 255);
+	text-align: center;
+	height: 25px;
+	font-size: 15pt;
+	padding: 20px;
+}
+
+button#all, #each {
+	background:rgb(150, 150, 150);
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
