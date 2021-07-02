@@ -22,22 +22,11 @@
 
 	<script type="text/javascript"
 		src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=68531c38673fd6237787eeb6b31182ff&libraries=services"></script>
-
-	<style>
-		html,
-		body {
-			padding: 0px;
-			margin: 0px;
-			width: 100%;
-			height: 100%;
-		}
-	</style>
 </head>
 
 <body>
 	<div id="cover_close" onclick="document.getElementById('cover_close').style.display = 'none';"
 		style="cursor:pointer;">
-		<!-- style.display = 'none': click 하면 사라짐 -->
 		<img src="bg_img.png" style="width:100%; height:100%; position:absolute; z-index:5;">
 		<br> <br> <br> <br> <br>
 		<img src="fg_txt.png" style="width:70%;left:15%; position:absolute; z-index:7;">
@@ -79,7 +68,6 @@
 			<option value="중랑구">중랑구</option>
 		</SELECT>
 		<input type=button value="검색" onclick="find()"/><br>
-
 	</center>
 	<hr color="white" size=3>
 	</hr>

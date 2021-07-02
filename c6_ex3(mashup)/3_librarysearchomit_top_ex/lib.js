@@ -219,9 +219,9 @@ function handleRefresh() {
 		var url = "http://openAPI.seoul.go.kr:8088/4945456f676a6a3532327667467576/json/SeoulPublicLibraryInfo/" + i + "/" + j;
 		$.getJSON(url, updateLibrary);
 
-	}//for
+	}
 	addBound();// 지도에 원을 표시
-	//리스트 부분
+
 	var newScriptElement = document.createElement("script");
 	newScriptElement.setAttribute("src", url);
 
@@ -235,9 +235,9 @@ function handleRefresh() {
 	else {
 		head.replaceChild(newScriptElement, oldScriptElement);
 	}
-}	//handleRefresh
+}
 
-function updateLibrary(librarys) {	//16번 호출
+function updateLibrary(librarys) {
 	var librarys = librarys.SeoulPublicLibraryInfo.row;
 	var addr = "";
 
@@ -251,22 +251,21 @@ function updateLibrary(librarys) {	//16번 호출
 	for (var i = 0; i < librarys.length; i++) {
 		var lib = librarys[i];
 		var imageSrc = "marker1.png",
-			imageSize = new kakao.maps.Size(27, 40), //마커의 크기(kakaomap에서 size 검색, 크기정보를 가지고 있는 사이즈 객체 생성)
-			imageOption = { offset: new kakao.maps.Point(14, 28) };//point 검색, 화면 좌표 정보를 담고 있는 포인터 객체 생성
+			imageSize = new kakao.maps.Size(27, 40),
+			imageOption = { offset: new kakao.maps.Point(14, 28) };
 
-		var loc = {//open API의 값들 위도와 경도
+		var loc = {
 			latitude: lib.XCNTS,
 			longitude: lib.YDNTS
 		};
-		var km = computeDistance(position, loc); //거리 계산, position 지도의 중심좌표이고 loc는 각 주차장 좌표
-		if (addr != lib.ADRES && km <= 3) {//주소가 중복되지 않고, 거리가 2km이내의 것들을 가져온다.
+		var km = computeDistance(position, loc);
+		if (addr != lib.ADRES && km <= 3) {
 			addr = lib.ADRES;
 			addMarker(imageSrc, imageSize, imageOption, lib.XCNTS, lib.YDNTS, lib.LBRRY_NAME, lib.ADRES, lib.TEL_NO, lib.FDRM_CLOSE_DATE);
 		}
 
 	}
 
-	//밑에 리스트 추가하는 부분
 	var librarysDiv = document.getElementById("librarys");
 	librarysDiv.innerHTML = "";
 
@@ -331,7 +330,7 @@ function addBound() {
 	// 지도에 원을 표시합니다 
 	bound.setMap(map);
 
-	kakao.maps.event.addListener(map, 'dragstart', function () {//지도가 이동될때도 원이 다시 그려짐
+	kakao.maps.event.addListener(map, 'dragstart', function () {
 		bound.setMap(null);
 	});
 }
@@ -358,9 +357,9 @@ function addMarker(imageSrc, imageSize, imageOption, latitude, longitude, name, 
 	var content = "<div style='width:100%; height:100%; padding:5px; font-size:0.8em;'>" + "도서관 : " + '<b>' + name + '</b>' + '<br>' + "주소 : " + address + '<br>' + "전화번호 : " + tel + '<br>' + "휴관일 : " + '<font color="red" >' + closeday + '</font>' + "</div>";
 
 	// 마커를 클릭했을 때 마커 위에 표시할 인포윈도우를 생성합니다
-	var iwContent = content, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-		iwPosition = markerPosition, //인포윈도우 표시 위치입니다
-		iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+	var iwContent = content,
+		iwPosition = markerPosition,
+		iwRemoveable = true;
 
 	// 인포윈도우를 생성합니다
 	var infowindow = new kakao.maps.InfoWindow({
