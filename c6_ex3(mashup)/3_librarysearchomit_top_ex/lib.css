@@ -17,7 +17,7 @@ body {
 }
 
 div#librarys {  
-	background-color: #F7BE81;
+	background-color: #b0c9ff;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
 	margin: 10px 0px 0px 0px;
@@ -30,7 +30,7 @@ div.librarys {
 	padding: 10px;
 }
 div.librarys:nth-child(2n){
-	background-color: #FAFAD2;
+	background-color: #e4e4e4;
 }
 div.librarys:first-child{
 	-webkit-border-top-left-radius: 6px;
