@@ -1,0 +1,8 @@
+/* tweetshirt.css */
+canvas#tshirtCanvas {
+	margin: 3px;
+	padding:3px;
+	height: 99%;
+	width: 98%;
+	border: 1px solid black;
+}
