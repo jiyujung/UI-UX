@@ -4,7 +4,7 @@
 <title>각종메소드를 사용하여 의미있는 그림그리기</title>
 <style>
 	canvas {
-		border: 1px solid black;
+		border: 15px solid green;
 	}
 </style>
 <script>
@@ -14,6 +14,14 @@ function drawSmileyFace() {
 	var canvas = document.getElementById("smiley");
 	var context = canvas.getContext("2d");
 
+	// 글귀 만들기
+	context.shadowColor="rgba(0, 0, 0, 0.5)";
+	context.shadowOffsetX = 4;
+	context.shadowOffsetY = 4;
+	context.shadowBlur = 5;
+	context.fillStyle = "magenta";
+	context.font = "bold 40px verdana, sans-serif";
+	context.fillText("It's a beautiful day!", 100, 80);
 	// 얼굴
 	context.beginPath();
 	context.arc(300, 				// x   (x,y)는 중심에 있다
@@ -29,32 +37,51 @@ function drawSmileyFace() {
 	// 왼쪽 눈
 	context.beginPath();
 	context.arc(200, 250, 25, 0, degreesToRadians(360), true);
+	context.fillStyle = "rgb(0, 173, 239)";
+	context.fill();
 	context.stroke();
 
 	// 오른쪽 눈
 	context.beginPath();
 	context.arc(400, 250, 25, 0, degreesToRadians(360), true);
+	context.fillStyle = "rgb(0, 173, 239)";
+	context.fill();
 	context.stroke();	
 
 	// 코
 	context.beginPath();
-	context.moveTo(300, 300);
-	context.lineTo(300, 350);
+	context.lineWidth = 10;
+	context.moveTo(300, 280);
+	context.quadraticCurveTo(250, 350, 320, 350);
+	context.strokeStyle = "#00ff00";
 	context.stroke();	
 
 	// 시작 각도는 중점의 오른쪽에 있다. 그래서 위쪽이 열린 반원을 그리려면
 	// 스마일리의 입을 그릴 때처럼 시계 방향으로 그려야 한다.
 	// 보다 현실감 나는 입 모양을 그리기 위해 
 	// 각도는 반원의 가장자리에서 시작되는 각의 합이다.
-	context.beginPath();
-	context.arc(300, 350, 75, degreesToRadians(20), degreesToRadians(160), false);
 
 	// 입도 다음과 같은 방법으로 그릴 수 있다:
 	//var angle = degreesToRadians(20);
 	//context.arc(300, 350, 75, angle, Math.PI-angle, false);
 
 	//입
-	context.stroke();
+	context.beginPath();
+	context.arc(300, 400, 50, 0, degreesToRadians(180), false);
+	context.fillStyle = "rgb(255, 0, 0)";
+	context.fill();
+	// context.stroke();
+
+	// 입의 위의 선 연결
+	context.beginPath();
+	context.moveTo(250, 400);
+	context.lineTo(350, 400);
+
+	// 머리
+	context.beginPath();
+	context.arc(300, 300, 200, degreesToRadians(230), degreesToRadians(335), false);
+	context.fillStyle = "#000000";
+	context.fill();
 }
 
 function degreesToRadians(degrees) {

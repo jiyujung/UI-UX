@@ -10,14 +10,17 @@
         <script>
             window.onload = function() {    // 페이지가 완전히 로드 된 후에 그리기 시작
                 var canvas = document.getElementById("tshirtCanvas");
-                
+
                 var context = canvas.getContext("2d");
 
                 context.fillRect(10, 10, 100, 100);
+                context.strokeRect(30, 30, 100, 100);
+                context.strokeRect(60, 60, 100, 100);
+                context.fillRect(90, 90, 100, 100);
             }
         </script>
     </head>
     <body>
-        <canvas width="600" height="200" id="tshirtCanvas"></canvas>
+        <canvas width="600" height="500" id="tshirtCanvas"></canvas>
     </body>
 </html>

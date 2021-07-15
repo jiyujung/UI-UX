@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta charset="utf-8">
+  <title>피자 그리기</title>
+  <script>
+    function initiate(){
+  	  var elem=document.getElementById('canvas');
+  	  canvas=elem.getContext('2d');
+
+      canvas.beginPath();
+      canvas.arc(100, 100, 50, 0, Math.PI*2, false);
+      canvas.lineWidth=10;
+      canvas.stroke();
+
+      canvas.beginPath();
+      canvas.arc(300, 100, 50, 0, Math.PI*1, true);
+      canvas.lineWidth=10;
+      canvas.lineCap="round";
+      canvas.stroke();
+
+      canvas.beginPath();
+      canvas.arc(300, 300, 50, 0, Math.PI*1, false);
+      canvas.lineWidth=10;
+      canvas.lineCap="round";
+      canvas.stroke();
+
+      canvas.beginPath();
+      canvas.arc(300, 500, 50, Math.PI*1, 0, false);
+      canvas.lineWidth=10;
+      canvas.lineCap="round";
+      canvas.stroke();
+
+      canvas.beginPath();
+      canvas.arc(500, 100, 50, Math.PI*1, 0, true);
+      canvas.lineWidth=10;
+      canvas.lineCap="round";
+      canvas.stroke();
+
+      canvas.beginPath();
+      canvas.arc(500, 300, 50, 0, Math.PI*1, false);
+      canvas.lineWidth=10;
+      canvas.lineCap="round";
+      canvas.stroke();
+
+      canvas.beginPath();
+      canvas.arc(700, 100, 50, 0, Math.PI*1.5, false);
+      canvas.lineWidth=10;
+      canvas.lineTo(700, 100);
+      canvas.lineTo(750, 100);
+      canvas.fillStyle = "rgb(0, 173, 239)";
+      canvas.fill();
+      canvas.strokeStyle = "#0000ff";
+      canvas.stroke();
+
+      canvas.beginPath();
+      canvas.arc(900, 100, 50, 0, Math.PI*1.5, true);
+      canvas.lineWidth=15;
+      canvas.lineTo(900, 100);
+      canvas.lineTo(950, 100);
+      canvas.fillStyle = "yellow";
+      canvas.fill();
+      canvas.strokeStyle = "#ff0000";
+      canvas.stroke();
+  	}
+  	window.addEventListener("load", initiate, false);
+  </script>
+</head>
+<body>
+  <section id="canvasbox">
+    <canvas id="canvas" width="1000" height="500">
+      Your browser doesn't support the canvas element
+    </canvas>
+  </section>
+</body>
+</html>
