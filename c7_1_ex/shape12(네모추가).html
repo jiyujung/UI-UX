@@ -24,12 +24,11 @@
 		var index = selectObj.selectedIndex;
 		var shape = selectObj[index].value;
 
-
-		
-		
-		
-		
-
+		if (shape == "squares") {
+			for (var squares = 0; squares < 15; squares++) {
+				drawSquare(canvas, context);
+			}
+		}
 	}
 
 	// This is where we'll set the background color
@@ -76,14 +75,15 @@
 		</select>
 	</p>
 
+	<p>
+		<label for="shape">Circles or squares?</label>
+		<select id="shape">
+			<option value="none" selected="selected">Neither</option>
 
-
-
-
-
-
-
-
+			<option value="squares">Squares</option>
+		</select>
+	</p>
+	
 	<p>
 		<input type="button" id="previewButton" value="Preview">
 	</p>
