@@ -30,15 +30,14 @@
 			}
 		}
 	}
+	
+	function getShapeColor() {
+		var selectObj = document.getElementById("shapeColor");
+		var index = selectObj.selectedIndex;
+		var bgColor = selectObj[index].value;
 
-	
-	
-	
-	
-	
-	
-	
-	
+		return bgColor;
+	}
 
 	// This is where we'll set the background color
 	function fillBackgroundColor(canvas, context) {
@@ -58,7 +57,7 @@
 		var y = Math.floor(Math.random() * canvas.height);
 
 		//context.fillStyle = "magenta";
-
+		context.fillStyle = getShapeColor();
 		context.fillRect(x, y, w, w+20);
 	}
 
@@ -77,7 +76,7 @@
 		context.lineWidth = 5;
   	    //context.fillStyle="red"; , context.fill(); 은 다각형의 색을 채운다. */
         //context.strokeStyle = '#ff0000'; /* set line color */
-
+		context.strokeStyle = getShapeColor();
         context.stroke(); /* 경로에 따라 선을 그린다 */
 	}
 
@@ -92,7 +91,7 @@
 
 
 		//context.fillStyle = "blue";
-
+		context.fillStyle = getShapeColor();
 		context.fill();
 	}
 

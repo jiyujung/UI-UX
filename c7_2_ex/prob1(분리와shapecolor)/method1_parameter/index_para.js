@@ -15,9 +15,9 @@
 		var shape = selectObj[index].value;
 		
 
-		
-		
-		
+
+
+
 
 		if (shape == "squares") {
 			for (var squares = 0; squares < 20; squares++) {
@@ -49,22 +49,29 @@
 		context.fillRect(0, 0, canvas.width, canvas.height);
 
 	}
-
 	// Draws a square at a random location
-	function drawSquare(canvas, context,      ) {
+	function drawSquare(canvas, context, shColor) {
 		var w = Math.floor(Math.random() * 40);    
 		var x = Math.floor(Math.random() * canvas.width);
 		var y = Math.floor(Math.random() * canvas.height);
+
+		var shapecolor=document.getElementById("shapecolor");
+		var index = shapecolor.selectedIndex;
+		var shColor = shapecolor[index].value;
 
 		context.fillStyle = shColor;
 		context.fillRect(x, y, w, w);
 	}
 	
-	function drawCircle(canvas, context,        ) {
+	function drawCircle(canvas, context, shColor) {
 		var radius=Math.floor(Math.random()*40);
 		var x = Math.floor(Math.random() * canvas.width);
 		var y = Math.floor(Math.random() * canvas.height);
 		
+		var shapecolor=document.getElementById("shapecolor");
+		var index = shapecolor.selectedIndex;
+		var shColor = shapecolor[index].value;
+
 		context.beginPath();
 		context.arc(x,y,radius,0,degreesToRadians(360),true);
 		
@@ -72,11 +79,16 @@
 		context.fill();
 	}
 	
-	function drawLine(canvas, context,        ) {
+	function drawLine(canvas, context, shColor) {
 		var x = Math.floor(Math.random() * canvas.width);
 		var y = Math.floor(Math.random() * canvas.height);
 		var x1 = Math.floor(Math.random() * canvas.width);
 		var y1 = Math.floor(Math.random() * canvas.height);
+
+		var shapecolor=document.getElementById("shapecolor");
+		var index = shapecolor.selectedIndex;
+		var shColor = shapecolor[index].value;
+		
 		context.beginPath();
 		context.moveTo(x,y);
 		context.lineTo(x1,y1);
