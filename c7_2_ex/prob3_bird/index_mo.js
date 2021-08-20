@@ -30,9 +30,8 @@ function previewHandler() {
 		}
 	}
 	drawText(canvas, context);
-
-	
-	
+	drawBird(canvas, context);
+	drawOutline(canvas, context);	
 }
 
 // This is where we'll set the background color
@@ -112,22 +111,22 @@ function drawText(canvas, context) {
 
 }
 
+function drawBird(canvas, context) {
+	var twitterBird = new Image();
+	var mirim = new Image();
+	twitterBird.src = "twitterBird.png";
+	mirim.src = "mirim.png";
+	twitterBird.onload = function() {
+		context.drawImage(twitterBird, 20, 120, 70, 70);
+		context.drawImage(mirim, canvas.width-100, 20, 70, 70);
+	};
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function drawOutline(canvas, context) {
+	context.lineWidth = 5;
+	context.strokeStyle = 'blue';
+	context.strokeRect(2, 2, canvas.width-4, canvas.height-4);
+}
 
 /*function updateTweets(tweets) {
 	var tweetsSelection = document.getElementById("tweets");
