@@ -30,6 +30,7 @@ function previewHandler() {
 		}
 	}
 
+	drawText(canvas, context);
 }
 
 // This is where we'll set the background color
@@ -92,22 +93,20 @@ function drawLine(canvas, context) {
 
 }
 
+function drawText(canvas, context) {
+	var selectObj  = document.getElementById("foregroundColor");
+	var index = selectObj.selectedIndex;
+	var fgColor = selectObj[index].value;
 
+	context.fillStyle = fgColor;
+	context.font = "bold 1em 고딕";
+	context.textAlign = "left";
+	context.fillText("이 트윗을 봅니다", 20, 40);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	context.font = "bold 1em 고딕";
+	context.textAlign = "right";
+	context.fillText("훌륭한 문구입니다!", canvas.width - 20, canvas.height - 40);
+}
 
 /*function updateTweets(tweets) {
 	var tweetsSelection = document.getElementById("tweets");
