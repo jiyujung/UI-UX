@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Example Page</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        body {
+            font-family: "Trebuchet MS", sans-serif;
+            margin: 50px;
+        }
+
+        .demoHeaders {
+            margin-top: 2em;
+        }
+
+        #datepicker1{
+            font-size: 15pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="demoHeaders">생년월일을 입력하세요</h2>
+    <!-- <div id="datepicker1"></div> -->
+    <font size=4>생년월일: <input type="text" id="datepicker1" size=12></font>
+    
+    <script>
+        $.datepicker.setDefaults({
+            dateFormat: 'yy년 m월 d일',// dateFormat: 'yy-mm-dd',
+            prevText: '이전 달',
+            nextText: '다음 달',
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            showMonthAfterYear: true,
+            yearSuffix: '년'
+        });
+        $(function () {
+            $("#datepicker1").datepicker();
+        });
+    </script>
+
+</body>
+
+</html>
