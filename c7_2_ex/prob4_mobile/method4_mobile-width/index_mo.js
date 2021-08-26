@@ -118,8 +118,8 @@ function drawBird(canvas, context) {
 	twitterBird.src = "twitterBird.png";
 	mirim.src = "mirim.png";
 	twitterBird.onload = function() {
-		context.drawImage(twitterBird, 20, 120, 70, 70);
-		context.drawImage(mirim, canvas.width-100, 20, 70, 70);
+		context.drawImage(twitterBird, 20, canvas.height-40, 30, 30);
+		context.drawImage(mirim, canvas.width-40, 10, 30, 30);
 	};
 
 }
