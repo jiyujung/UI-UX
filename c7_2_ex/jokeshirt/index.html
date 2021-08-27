@@ -1,32 +1,32 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<title>TweetShirt</title>
 	<meta charset="utf-8" />
-
-
-
-
-
-
-
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="joke.css">
+	<link rel="shortcut icon" href="./logo.png">
+	<link rel="apple-touch-icon" href="./logo.png">
 	<script src="main.js"></script>
 	<script src="jokeshirt.js"></script>
 </head>
+
 <body>
-    <canvas id="tshirtCanvas">
+	<canvas id="tshirtCanvas">
 		<p>You need canvas to use Tweetshirt!</p>
 		<p>This example requires a browser that supports the
-		<a href="http://www.w3.org/html/wg/html5/">HTML5</a> 
-		&lt;canvas&gt; feature.</p>
+			<a href="http://www.w3.org/html/wg/html5/">HTML5</a>
+			&lt;canvas&gt; feature.
+		</p>
 	</canvas>
 	<form>
-	<p>
-			<label for="backgroundColor">Select background color:</label> <select
-				id="backgroundColor">
-<!-- 				<option value="none" selected="selected">Neither</option> -->
+		<p>
+			<label for="backgroundColor">Select background color:</label> <select id="backgroundColor">
+				<!-- 				<option value="none" selected="selected">Neither</option> -->
 				<option value="Yellow">Yellow</option>
 				<option value="magenta">Mgenta</option>
 				<option value="Red">Red</option>
@@ -39,16 +39,15 @@
 
 		<p>
 			<label for="shape">Select shape?</label> <select id="shape">
-<!-- 				<option value="none" selected="selected">Neither</option> -->
+				<!-- 				<option value="none" selected="selected">Neither</option> -->
 				<option value="circles">Circles</option>
 				<option value="squares">Squares</option>
 				<option value="lines">Lines</option>
 			</select>
 		</p>
 		<p>
-			<label for="shapeColor">Select shapeColor:</label> <select
-				id="shapeColor">
-<!-- 				<option value="none" selected="selected">Neither</option> -->
+			<label for="shapeColor">Select shapeColor:</label> <select id="shapeColor">
+				<!-- 				<option value="none" selected="selected">Neither</option> -->
 				<option value="Magenta">Magenta</option>
 				<option value="Yellow">Yellow</option>
 				<option value="Red">Red</option>
@@ -59,9 +58,8 @@
 			</select>
 		</p>
 		<p>
-			<label for="foregroundColor">Select foregroundColor:</label> <select
-				id="foregroundColor">
-<!-- 				<option value="none" selected="selected">Neither</option> -->
+			<label for="foregroundColor">Select foregroundColor:</label> <select id="foregroundColor">
+				<!-- 				<option value="none" selected="selected">Neither</option> -->
 				<option value="Green">Green</option>
 				<option value="magenta">Mgenta</option>
 				<option value="yellow">Yellow</option>
@@ -71,18 +69,12 @@
 				<option value="violet">Violet</option>
 			</select>
 		</p>
-	<p>
-
-
-
-
-	</p>
-	<p>
-		<input type="button" id="previewButton" value="Preview">
-	</p>
+		<p>
+			<input type="button" id="previewButton" value="Preview">
+		</p>
 	</form>
 
-<!--
+	<!--
 <script src="http://tweetshirt.wickedlysmart.com/?callback=updateTweets">
 </script>
 -->

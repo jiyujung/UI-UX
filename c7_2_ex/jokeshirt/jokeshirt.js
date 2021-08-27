@@ -3,12 +3,8 @@ window.onload = function() {
 	button.onclick = previewHandler;
 }
 
-
-
-
-
-
-
+var tweet;
+var xmlhttp;
 
 function previewHandler() {
 	var canvas = document.getElementById("tshirtCanvas");
@@ -36,20 +32,11 @@ function previewHandler() {
 			drawLine(canvas, context);
 		}
 	}
-	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	document.getElementById('previewButton').addEventListener('click', getJoke, false);
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = receiveJoke;
+
 	drawText(canvas, context);
 	drawBird(canvas, context);
 	drawOutline(canvas, context);
@@ -125,20 +112,17 @@ function drawLine(canvas, context) {
 
 }
 
+function getJoke() {
+	xmlhttp.open('GET', 'http://api.icndb.com/jokes/random/', true);
+	xmlhttp.send();
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function receiveJoke() {
+	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		var json = jQuery.parseJSON(xmlhttp.responseText);
+		tweet = json.value.joke;
+	}
+}
 // draws all the text, including the tweet
 function drawText(canvas, context) {
 	var selectObj = document.getElementById("foregroundColor");
@@ -151,25 +135,19 @@ function drawText(canvas, context) {
 	context.textAlign = "left";
 	context.fillText("이 트윗을 봅니다", 10, 15);
 	
-	
-	
-	
-	
-	
-	
+	context.fillStyle = "black";
+	context.font = "bold 0.6em sans-serif";
+	selectObj = document.getElementById("tweets");
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	if (tweet.length > 30) {
+		var tweetLines = splitIntoLines(tweet);
+		for (var i = 0; i < tweetLines.length; i++) {
+			context.fillText(tweetLines[i], 10, 50+(i*25));
+		}
+	} else {
+		context.fillText(tweet, 10, canvas.height-80);
+	}
+
 	context.fillStyle = fgColor;
 	context.font = "bold 0.5em HyPost";
 	context.textAlign = "right";
@@ -194,38 +172,14 @@ function degreesToRadians(degrees) {
     return (degrees * Math.PI)/180;
 }
 
-
-/*추가*/
-function updateTweets(tweets) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-/*추가*/
-
 /*추가*/
 function splitIntoLines(str) {
+	var strs = new Array();
+	var space = str.indexOf(' ', 25);
+	strs[0] = str.substring(0, space);
+	strs[1] = str.substring(space + 1);
 
-
-
-
-
-
-
-
-
-	
+	return strs;
 }
+
 /*추가*/
