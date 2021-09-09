@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>02-11</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("input:disabled").css("border", "solid 2px yellow");
+	$("#inquery").click(function() {
+		var v = $("#food option:selected").val();
+		if (v=="") {
+			alert("웹앱 분류를 선택하셔야 합니다.");
+		} else {
+			$("#result").val(v);
+		}
+	});
+});
+</script>
+</head>
+<body>
+    웹앱 분류 : 
+    <select id="food">
+		<option value="" selected>-----웹앱 분류를 선택하세요-----</option>
+		<option value="여 가">여 가</option>
+		<option value="정 보">정 보</option>
+		<option value="오 락">오 락</option>
+		<option value="위 치">위 치</option>
+		<option value="의 료">의 료</option>
+	</select>
+	<button id="inquery">검색</button>
+	<hr>
+	선택 결과 : <input type="text" id="result" value="" disabled />
+</body>
+</html>

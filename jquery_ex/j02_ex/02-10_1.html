@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title>02-10_1</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#foods tr:odd").css("background-color", "yellow");
+	$("#foods tr:even").css("background-color", "#66ff66");
+	$("#foods tr:first").css("background-color", "#00ffff").css("color", "magenta");
+	$("#foods tr:eq(2)").css("font-style", "italic");
+});
+</script>
+</head>
+<body>
+	<h1>웹앱 목록</h1>
+	<table id="foods">
+		<tr>
+			<th>No</th><th>content</th><th>종류</th>
+		</tr>
+		<tr>
+			<td>No1</td><td>ParkWalk</td><td>여가</td>
+		</tr>
+		<tr>
+			<td>No2</td><td>SeoulRoad</td><td>여가</td>
+		</tr>
+		<tr>
+			<td>No3</td><td>SubwayInfo</td><td>위치</td>
+		</tr>
+		<tr>
+			<td>No4</td><td>MirimTour</td><td>위치</td>
+		</tr>
+	</table>
+</body>
+</html>
