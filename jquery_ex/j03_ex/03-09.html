@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title>03-09</title>
+<style>
+	div { width:300px; }
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#a,#c  div").css("text-decoration", "underline");
+	// 위의 코드는 $("#a").add("#c  div")와 동일함.	
+	// id가 a인 요소를 선택하고 id가 c인 요소의 후손중에서 div태그를 선택한다.
+	$("#a, #c").css("border", "solid 1px black").find("div").css("background-color", "orange");
+	// 위의 코드는 id가 a 또는 c를 선택하고 후손중에서 div태그를 모두 선택한다.
+});
+</script>
+</head>
+<body>
+    <div id="a">
+    	<p>오래 살아야 돼~</p>
+    	<div>김수한무</div>
+    	<div>거북이와 두루미</div>
+    </div>
+    <div id="b">
+    	<div>삼천갑자 동방삭</div>
+    	<div>치치카프 사리사리센타</div>
+    	<h2>워리워리 세브리깡</h2>
+    	<div>무두셀라 구름이</div>
+    </div>
+    <div id="c">
+    	<div>허리케인에 담벼락</div>
+    	<div>담벼락에 서생원</div>
+    </div>
+    <div id="d">
+    	<div>서생원에 고양이</div>
+    	<p>고양이에 바둑이</p>
+    	<div>바둑이는 돌돌이</div>
+    </div>
+</body>
+</html>
