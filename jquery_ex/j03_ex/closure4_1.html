@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<title>closure1</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+    var arr = []
+    for (var i=0; i<5; i++) {
+        arr[i] = function(id) {
+            return function() {
+                return id;
+            }
+        }(i);
+    }
+    for (var index in arr) {
+        console.log(arr[index] ());
+    }
+</script>
+</head>
+<body>
+</body>
+</html>
