@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>그림회전하기</title>
+  <style>
+    img.scape_hidden {
+      display: none;
+    }
+
+    img.scape_visible {
+      display: block;
+    }
+
+    img {
+      background-size: contain;
+      width: 90%;
+      padding: 10px;
+      background-color: rgb(2, 2, 99);
+    }
+  </style>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script> -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var handle;
+
+      function viewSlide() {
+        var slider = $("#slider");
+        slider.find("img.scape_visible").removeClass("scape_visible");
+        slider.find("img:first").appendTo(slider).addClass("scape_visible");
+      }
+
+      $("#slideStart").click(function () {
+        handle = setInterval(viewSlide, 2000);
+      });
+
+      $("#slideStop").click(function () {
+        clearInterval(handle);
+      });
+
+      viewSlide();
+    });
+  </script>
+</head>
+
+<body>
+  <center>
+    <h3>내가 좋아하는 꽃</h3><br>
+    <div id="slider">
+      <img class="scape_hidden" src="images/fig1.jpg" />
+      <img class="scape_hidden" src="images/fig2.jpg" />
+      <img class="scape_hidden" src="images/fig3.jpg" />
+      <img class="scape_hidden" src="images/fig4.jpg" />
+      <img class="scape_hidden" src="images/fig5.jpg" />
+      <img class="scape_hidden" src="images/fig6.jpg" />
+      <img class="scape_hidden" src="images/fig7.jpg" />
+      <img class="scape_hidden" src="images/fig8.jpg" />
+    </div><br>
+
+    <button id="slideStart" class="btn btn-light btn-outline-secondary">Slide Show!</button>
+    <button id="slideStop" class="btn btn-light btn-outline-secondary">Stop Slide Show!</button>
+  </center>
+</body>
+
+</html>
